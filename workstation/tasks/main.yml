@@ -1,0 +1,33 @@
+---
+
+- name: install packages with homebrew
+  homebrew: name={{ item }} state=present
+  with_items:
+    - ack
+    - brew-cask
+    - fasd
+    - git
+    - leiningen
+    - node
+    - reattach-to-user-namespace
+    - tmux
+    - vim
+    - wget
+
+- name: install apps with brew cask
+  homebrew_cask: name={{ item }} state=present
+  with_items:
+    - alfred
+    - atom
+    - dropbox
+    - google-chrome
+    - karabiner
+    - slack
+    - spotify
+    - vagrant
+    - virtualbox
+
+- name: fetch dotfiles
+  git:
+    repo: https://github.com/joaalto/dotfiles-mac
+    dest: "{{ home }}"

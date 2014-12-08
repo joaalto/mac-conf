@@ -37,4 +37,4 @@
 - name: fetch dotfiles
   git:
     repo: https://github.com/joaalto/dotfiles-mac
-    dest: "{{ home }}"
+    dest: "{{ home }}/dotfiles-mac"

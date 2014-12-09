@@ -49,8 +49,11 @@
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
   with_items:
-      - { src: "~/dotfiles-mac/.lein/profiles.clj", dest: "~/.lein/profiles.clj" }
-      - { src: "~/dotfiles-mac/.vimrc", dest: "~/.vimrc" }
+      - { src: "~/dotfiles-mac/.aliases", dest: "~/.aliases" }
       - { src: "~/dotfiles-mac/.gitconfig", dest: "~/.gitconfig" }
       - { src: "~/dotfiles-mac/.gitignore_global", dest: "~/.gitignore_global" }
+      - { src: "~/dotfiles-mac/.lein/profiles.clj", dest: "~/.lein/profiles.clj" }
+      - { src: "~/dotfiles-mac/.tmux.conf", dest: "~/.tmux.conf" }
+      - { src: "~/dotfiles-mac/.vimrc", dest: "~/.vimrc" }
+      - { src: "~/dotfiles-mac/.zshrc", dest: "~/.zshrc" }
 

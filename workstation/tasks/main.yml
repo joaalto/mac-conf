@@ -1,5 +1,4 @@
 ---
-
 - name: install packages with homebrew
   homebrew: name={{ item }} state=present
   with_items:
@@ -43,3 +42,13 @@
   git:
     repo: https://github.com/joaalto/dotfiles-mac
     dest: "{{ home }}/dotfiles-mac"
+
+- name: create links
+  file:
+    state: link
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+      - { src: "~/dotfiles-mac/.lein/profiles.clj", dest: "~/.lein/profiles.clj" }
+      - { src: "~/dotfiles-mac/.vimrc", dest: "~/.vimrc" }
+

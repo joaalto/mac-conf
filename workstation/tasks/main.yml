@@ -6,7 +6,6 @@
     - ack
     - brew-cask
     - fasd
-    - git
     - leiningen
     - node
     - reattach-to-user-namespace

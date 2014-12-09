@@ -43,7 +43,7 @@
     repo: https://github.com/joaalto/dotfiles-mac
     dest: "{{ home }}/dotfiles-mac"
 
-- name: create links
+- name: create links to dotfiles
   file:
     state: link
     src: "{{ item.src }}"
@@ -51,4 +51,6 @@
   with_items:
       - { src: "~/dotfiles-mac/.lein/profiles.clj", dest: "~/.lein/profiles.clj" }
       - { src: "~/dotfiles-mac/.vimrc", dest: "~/.vimrc" }
+      - { src: "~/dotfiles-mac/.gitconfig", dest: "~/.gitconfig" }
+      - { src: "~/dotfiles-mac/.gitignore_global", dest: "~/.gitignore_global" }
 

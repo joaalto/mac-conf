@@ -50,6 +50,8 @@
     dest: "{{ item.dest }}"
   with_items:
       - { src: "~/dotfiles-mac/.aliases", dest: "~/.aliases" }
+      - { src: "~/dotfiles-mac/.atom/config.cson", dest: "~/.atom/config.cson" }
+      - { src: "~/dotfiles-mac/.atom/keymap.cson", dest: "~/.atom/keymap.cson" }
       - { src: "~/dotfiles-mac/.gitconfig", dest: "~/.gitconfig" }
       - { src: "~/dotfiles-mac/.gitignore_global", dest: "~/.gitignore_global" }
       - { src: "~/dotfiles-mac/.lein/profiles.clj", dest: "~/.lein/profiles.clj" }
